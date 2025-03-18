@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Global CSS or in a styles module file */
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #190b1f;
+}
+
+h2 {
+    @apply text-x1 md:text-4x1;
+}
+
+h2 {
+    @apply text-x1 tracking-tight leading-relaxed;
+}
+
+p {
+    @apply text-x1 tracking-tight leading-relaxed;
+}
+
+span {
+    @apply text-purple-600
+}
+
+.shine-effect {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(circle, rgba(178, 19, 202, 0.2), transparent 70%);
+}
