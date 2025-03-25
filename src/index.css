@@ -32,3 +32,7 @@ span {
     z-index: 1;
     background: radial-gradient(circle, rgba(178, 19, 202, 0.2), transparent 70%);
 }
+
+.bg-primary-color {
+    @apply bg-purple-600
+}
