@@ -1,6 +1,7 @@
 import React from 'react'
 import carService from '../assets/car-service.png'
 import {AiOutlineGithub} from "react-icons/ai";
+import Reveal from "./Reveal.jsx";
 
 const projects = [
     {
@@ -46,6 +47,7 @@ const Portfolio = () => {
         <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
             <h2 className="text-3xl font-bold text-gray-200 mb-8">Portfolio</h2>
             {projects.map((project, index) => (
+                <Reveal>
                 <div key={index} className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} mb-12`}>
                     <div className="w-full md:w-1/2 p-4">
                         <img
@@ -65,6 +67,7 @@ const Portfolio = () => {
                         </div>
                     </div>
                 </div>
+                </Reveal>
             ))}
         </div>
     )
