@@ -1,23 +1,15 @@
-import React from "react";
-import {FaGithubSquare, FaInstagram} from "react-icons/fa";
-
-const Footer = () => {
+function Footer() {
     return (
-        <div className="max-w-[1300px] mx-auto flex justify-between p-6 md:p-20 text-sm md:text-lg mt-12">
-            <div className="space-y-4">
-                <h3 className="text-2xl text-gray-200 font-semibold">Malith Shehan</h3>
-                <div className="flex flex-row gap-6 text-gray-400 text-4xl">
-                    <a href="#"><FaGithubSquare/></a>
-                    <a href="#"><FaInstagram/></a>
-
-                </div>
-
+        <footer className="bg-auto text-white py-6 tex border-2 border-gray-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center ">
+                        <p className="text-sm text-xl">
+                            &copy; {new Date().getFullYear()} <span className="font-semibold items-center">Malith Shehan</span><br/> All rights reserved.
+                        </p>
+                    </div>
             </div>
-
-            <p className="text-gray-400">@2025 Malith Shehan</p>
-
-        </div>
-    )
+        </footer>
+    );
 }
 
 export default Footer;

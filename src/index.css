@@ -5,9 +5,14 @@
 /* Global CSS or in a styles module file */
 
 body {
-    font-family: "Space Grotesk", sans-serif;
-    background-color: #190b1f;
+    font-family: "Roboto", sans-serif; /* Change font to Roboto or any other font */
+    background: linear-gradient(to right, #0e2a3e, #150535); /* Double-color gradient */
+    color: #ffffff; /* Ensure text is readable on the gradient background */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure gradient covers the entire viewport */
 }
+
 
 h2 {
     @apply text-x1 md:text-4x1;
