@@ -1,4 +1,3 @@
-import {Component} from "react";
 import Navbar from "./components/NavBar.jsx";
 import Hero from "./components/Hero.jsx";
 import Skills from "./components/Skills.jsx";
