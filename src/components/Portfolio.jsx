@@ -1,6 +1,6 @@
 import React from "react";
-import  chatApp from "../assets/chat-app.jpg";
-import cropMonitoring from "../assets/crop-monitoring.jpg";
+import cropMonitoring from "../assets/crop-Monitoring.jpg";
+import chatApp from "../assets/chat-app.jpg";
 import library from "../assets/library.png";
 import { AiOutlineGithub } from "react-icons/ai";
 import Reveal from "./Reveal.jsx";

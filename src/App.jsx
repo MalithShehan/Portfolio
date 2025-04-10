@@ -5,12 +5,10 @@ import Portfolio from "./components/Portfolio.jsx";
 import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
-import { HashRouter } from "react-router-dom";
 
 export default function App(){
     return (
         <>
-            <HashRouter>
             <Navbar />
             <Hero />
             <Skills />
@@ -18,7 +16,6 @@ export default function App(){
             <Experience />
             <Contact />
             <Footer />
-            </HashRouter>
         </>
     )
 }

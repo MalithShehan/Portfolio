@@ -76,7 +76,7 @@ const Hero = () => {
                         transition={{ duration: 1, delay: 1.5 }}
                     >
                         <a
-                            href="/assets/cv/Malith%20Shehan%20CV.pdf"
+                            href="/src/assets/cv/Malith%20Shehan%20CV.pdf"
                             download
                             className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold py-3 px-8 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
                         >
