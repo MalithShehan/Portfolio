@@ -1,5 +1,5 @@
 import React from "react";
-import cropMonitoring from "../assets/crop-Monitoring.jpg";
+import cropMonitoring from "../assets/crop-monitoring.jpg";
 import chatApp from "../assets/chat-app.jpg";
 import library from "../assets/library.png";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
