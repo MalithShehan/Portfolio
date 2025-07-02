@@ -2,34 +2,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Global CSS or in a styles module file */
 
 body {
-    font-family: "Roboto", sans-serif; /* Change font to Roboto or any other font */
-    background: linear-gradient(to right, #0e2a3e, #150535); /* Double-color gradient */
-    color: #ffffff; /* Ensure text is readable on the gradient background */
+    font-family: "Roboto", sans-serif;
+    background: radial-gradient(
+        circle at 30% 20%, rgba(128, 0, 128, 0.15) 0%, transparent 40%
+      ),
+      radial-gradient(
+        circle at 70% 80%, rgba(0, 128, 255, 0.15) 0%, transparent 50%
+      ),
+      linear-gradient(to right, #0e2a3e, #150535);
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Ensure gradient covers the entire viewport */
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-
+/* Typography */
 h2 {
-    @apply text-x1 md:text-4x1;
-}
-
-h2 {
-    @apply text-x1 tracking-tight leading-relaxed;
+    @apply text-xl md:text-4xl tracking-tight leading-relaxed;
 }
 
 p {
-    @apply text-x1 tracking-tight leading-relaxed;
+    @apply text-base md:text-lg tracking-tight leading-relaxed;
 }
 
 span {
-    @apply text-purple-600
+    @apply text-purple-600;
 }
 
+/* Utility Classes */
 .shine-effect {
     position: absolute;
     border-radius: 50%;
@@ -39,5 +43,17 @@ span {
 }
 
 .bg-primary-color {
-    @apply bg-purple-600
+    @apply bg-purple-600;
 }
+
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, #7c3aed, #3b82f6); /* purple to blue */
+}
+
