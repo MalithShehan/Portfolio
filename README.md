@@ -12,10 +12,10 @@ A modern portfolio app built using Flutter. Showcases my skills, projects, and c
 ## 🌐 Portfolio Website
 
 Check out my portfolio:  
-🔗 [https://your-portfolio-link.com]()https://malith-shehan.netlify.app/
+🔗 https://malith-shehan.netlify.app/
 
 GitHub Repo:  
-📁 [https://github.com/yourusername/your-portfolio-repo](https://github.com/MalithShehan/Portfolio.git)
+📁 https://github.com/MalithShehan/Portfolio.git
 
 ## 📷 Screenshots
 
