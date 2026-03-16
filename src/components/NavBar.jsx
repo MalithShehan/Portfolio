@@ -31,17 +31,17 @@ const Navbar = () => {
       initial={{ y: -60 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-[#050612]/70 backdrop-blur-2xl"
+      className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-[#051720]/70 backdrop-blur-2xl"
     >
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 md:px-10 h-20 text-gray-100">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 md:px-10 h-20 text-cyan-50">
         <a href="#" className="flex flex-col leading-tight">
-          <span className="text-sm tracking-[0.4em] uppercase text-gray-400">Portfolio</span>
+          <span className="text-[11px] tracking-[0.45em] uppercase text-cyan-200/70">Software Engineer</span>
           <span className="text-2xl font-semibold tracking-tight">Malith Shehan</span>
         </a>
 
-        <ul className="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em]">
+        <ul className="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em] text-cyan-100/80">
           {navItems.map((item) => (
-            <li key={item.id} className="hover:text-white/80 transition">
+            <li key={item.id} className="hover:text-white transition">
               <Link to={item.id} smooth offset={-80} duration={600}>
                 {item.label}
               </Link>
@@ -55,15 +55,15 @@ const Navbar = () => {
             smooth
             offset={-60}
             duration={600}
-            className="glass-button text-sm font-semibold"
+            className="accent-button text-sm"
           >
-            Let's talk
+            Hire me
           </Link>
         </div>
 
         <button
           onClick={toggleNav}
-          className="md:hidden text-gray-100"
+          className="md:hidden text-cyan-50"
           aria-label="Toggle menu"
         >
           {navOpen ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
@@ -78,7 +78,7 @@ const Navbar = () => {
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
-            className="fixed top-0 left-0 w-full min-h-screen bg-[#03030c] p-10 md:hidden z-40"
+            className="fixed top-0 left-0 w-full min-h-screen bg-[#04131b] p-10 md:hidden z-40"
           >
             <ul className="flex flex-col space-y-10 mt-24 text-center text-xl font-semibold tracking-[0.2em]">
               {navItems.map((item) => (
@@ -102,9 +102,9 @@ const Navbar = () => {
                   smooth
                   offset={-60}
                   duration={600}
-                  className="inline-flex items-center justify-center w-full py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400 text-black"
+                  className="inline-flex items-center justify-center w-full py-3 rounded-full bg-gradient-to-r from-[#19b7a6] to-[#f8b94b] text-[#052029]"
                 >
-                  Let's talk
+                  Hire me
                 </Link>
               </li>
             </ul>

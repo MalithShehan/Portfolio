@@ -1,26 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --bg-primary: #050611;
-    --bg-secondary: #0f172a;
-    --bg-card: rgba(15, 23, 42, 0.7);
-    --stroke: rgba(255, 255, 255, 0.08);
-    --text-primary: #f8fafc;
-    --text-muted: #94a3b8;
-    --accent: #8b5cf6;
-    --accent-strong: #22d3ee;
-    --shadow-pop: 0 25px 90px rgba(3, 7, 18, 0.45);
+    --bg-primary: #06141c;
+    --bg-secondary: #112331;
+    --bg-surface: rgba(12, 35, 48, 0.75);
+    --stroke: rgba(255, 255, 255, 0.12);
+    --text-primary: #ecfeff;
+    --text-muted: #9bc7cf;
+    --accent: #19b7a6;
+    --accent-strong: #f8b94b;
+    --shadow-pop: 0 28px 100px rgba(1, 18, 24, 0.46);
 }
 
 body {
-    font-family: "Space Grotesk", "Syne", system-ui;
+    font-family: "Manrope", system-ui, sans-serif;
     background:
-        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.18), transparent 45%),
-        radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.2), transparent 40%),
-        linear-gradient(120deg, #04030f 0%, #060d1f 35%, #0c142d 100%);
+        radial-gradient(circle at 10% 10%, rgba(25, 183, 166, 0.24), transparent 38%),
+        radial-gradient(circle at 92% 3%, rgba(248, 185, 75, 0.2), transparent 36%),
+        radial-gradient(circle at 58% 86%, rgba(35, 118, 141, 0.22), transparent 34%),
+        linear-gradient(120deg, #04121a 0%, #061a25 36%, #0c2b39 100%);
     color: var(--text-primary);
     margin: 0;
     min-height: 100vh;
@@ -28,7 +29,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: "Syne", "Space Grotesk", sans-serif;
+    font-family: "Syne", "Manrope", sans-serif;
     letter-spacing: -0.02em;
 }
 
@@ -36,30 +37,31 @@ p {
     color: var(--text-muted);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    position: relative;
+    overflow: clip;
+}
+
 .section-shell {
     border: 1px solid var(--stroke);
     border-radius: 32px;
-    background: linear-gradient(140deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.55) 100%);
+    background: linear-gradient(140deg, rgba(12, 35, 48, 0.82) 0%, rgba(8, 28, 39, 0.64) 100%);
     box-shadow: var(--shadow-pop);
     position: relative;
-}
-
-.section-shell::after {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    border-radius: 31px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    pointer-events: none;
+    overflow: hidden;
 }
 
 .halo {
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 65%);
+    background: radial-gradient(circle, rgba(25, 183, 166, 0.32), transparent 65%);
 }
 
 .soft-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(155, 199, 207, 0.34), transparent);
 }
 
 .badge-pill {
@@ -76,7 +78,7 @@ p {
 }
 
 .gradient-link {
-    color: var(--accent-strong);
+    color: #ffd58a;
     position: relative;
 }
 
@@ -94,12 +96,47 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 999px;
     padding: 0.85rem 1.75rem;
-    background: rgba(15, 23, 42, 0.35);
+    background: rgba(8, 31, 41, 0.45);
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .glass-button:hover {
     border-color: rgba(255, 255, 255, 0.35);
     transform: translateY(-2px);
+}
+
+.app-noise {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    z-index: -2;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.7) 1px, transparent 0);
+    background-size: 28px 28px;
+}
+
+.ambient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: -1;
+}
+
+.accent-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    padding: 0.85rem 1.7rem;
+    background: linear-gradient(95deg, var(--accent) 0%, var(--accent-strong) 100%);
+    color: #052029;
+    font-weight: 700;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.accent-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(25, 183, 166, 0.28);
 }
 

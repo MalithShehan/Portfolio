@@ -12,9 +12,9 @@ const projects = [
     img: cropMonitoring,
     title: "Crop Monitoring Platform",
     description:
-      "Dashboards for plantation teams to interpret soil data, watering schedules, and remote drone captures.",
+      "Built a data-rich dashboard for plantation teams to monitor soil conditions, automate watering alerts, and review drone captures.",
     links: {
-      site: "#",
+      site: "",
       github: "https://github.com/MalithShehan/Crop-monitoring-system.git",
     },
     stack: ["React", "Node", "MongoDB"],
@@ -23,9 +23,9 @@ const projects = [
     img: library,
     title: "Library Management System",
     description:
-      "Cross-platform application that streamlines lending, member onboarding, and analytics for campus libraries.",
+      "Developed a cross-platform solution that streamlines lending operations, member onboarding, and reporting for education institutes.",
     links: {
-      site: "#",
+      site: "",
       github: "https://github.com/MalithShehan/RAD-Final-Project.git",
     },
     stack: ["Java", "Firebase", "Figma"],
@@ -34,9 +34,9 @@ const projects = [
     img: chatApp,
     title: "Real-time Chat Application",
     description:
-      "Feature-rich messaging experience with authentication, typing states, and optimistic UI updates.",
+      "Engineered a real-time messaging app with authentication, typing indicators, and responsive UX across devices.",
     links: {
-      site: "#",
+      site: "",
       github: "https://github.com/MalithShehan/chat_application-Malith_Shehan-GDSE-68.git",
     },
     stack: ["React", "Socket.io", "Tailwind"],
@@ -45,7 +45,7 @@ const projects = [
     img: southlankafireworkswebsite,
     title: "South Lanka Fireworks Website",
     description:
-      "A vibrant e-commerce platform showcasing a wide range of fireworks products with seamless navigation and secure checkout.",
+      "Designed and shipped a vibrant e-commerce platform with product discovery, conversion-focused pages, and secure purchase flows.",
     links: {
       site: "https://slfireworks.com/",
       github: "https://github.com/MalithShehan/South-Lanka-Fireworks-Web.git",
@@ -70,10 +70,10 @@ const Portfolio = () => {
       >
         <span className="badge-pill">Selected Work</span>
         <h2 className="text-4xl md:text-5xl font-semibold mt-5">
-          Case studies that pair UX empathy with reliable engineering.
+          Product case studies that combine business impact and engineering quality.
         </h2>
-        <p className="mt-4 text-lg text-gray-300">
-          Rapid experiments, iterative delivery, and strong documentation keep my projects measurable and maintainable.
+        <p className="mt-4 text-lg text-cyan-50/75">
+          Each project below reflects how I approach requirements, architecture, and implementation with practical outcomes in mind.
         </p>
       </motion.div>
 
@@ -97,7 +97,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 flex gap-3 flex-wrap">
                   {project.stack.map((tag) => (
-                    <span key={tag} className="px-3 py-1 rounded-full bg-white/20 text-sm">
+                    <span key={tag} className="px-3 py-1 rounded-full bg-white/20 text-sm text-cyan-50">
                       {tag}
                     </span>
                   ))}
@@ -106,26 +106,33 @@ const Portfolio = () => {
 
               <div className="p-8 space-y-6">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.4em] text-gray-500">Featured</p>
+                  <p className="text-sm uppercase tracking-[0.4em] text-cyan-100/60">Featured</p>
                   <h3 className="text-2xl font-semibold mt-3">{project.title}</h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">{project.description}</p>
+                <p className="text-cyan-50/80 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-4">
-                  <a
-                    href={project.links.site}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-black bg-gradient-to-r from-purple-500 to-cyan-400"
-                    aria-label={`View live site of ${project.title}`}
-                  >
-                    <AiOutlineLink />
-                    Live preview
-                  </a>
+                  {project.links.site ? (
+                    <a
+                      href={project.links.site}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="accent-button text-sm"
+                      aria-label={`View live site of ${project.title}`}
+                    >
+                      <AiOutlineLink />
+                      Live preview
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm border border-white/20 text-cyan-100/70">
+                      <AiOutlineLink />
+                      Private deployment
+                    </span>
+                  )}
                   <a
                     href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full px-5 py-2 border border-white/20 text-sm"
+                    className="inline-flex items-center gap-2 rounded-full px-5 py-2 border border-white/20 text-sm text-cyan-50"
                     aria-label={`View GitHub repository of ${project.title}`}
                   >
                     <AiOutlineGithub />

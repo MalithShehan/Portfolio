@@ -8,6 +8,7 @@ import {
     AiOutlineGithub,
     AiOutlineInstagram,
     AiOutlineLinkedin,
+    AiOutlineArrowRight,
 } from "react-icons/ai";
 import {
     DiCss3,
@@ -23,9 +24,9 @@ import {
 import { FiFigma } from "react-icons/fi";
 
 const stats = [
-    { label: "Projects", value: "15+" },
-    { label: "Years Learning", value: "02" },
-    { label: "Focus", value: "Full-stack" },
+    { label: "Completed Projects", value: "15+" },
+    { label: "Years Building", value: "2+" },
+    { label: "Current Role", value: "Software Engineer" },
 ];
 
 const socialLinks = [
@@ -63,34 +64,35 @@ const Hero = () => {
 
                     <div>
                         <TypeAnimation
-                            sequence={["Frontend Engineer", 1400, "Creative Developer", 1400, "UI Collaborator", 1400]}
+                            sequence={["Software Engineer", 1400, "Frontend Specialist", 1400, "Full-stack Builder", 1400]}
                             speed={50}
                             repeat={Infinity}
-                            className="text-lg uppercase tracking-[0.4em] text-gray-400"
+                            className="text-sm md:text-base uppercase tracking-[0.35em] text-cyan-100/80"
                         />
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mt-5">
-                            Crafting thoughtful digital products & delightful experiences.
+                            I design and build production-ready web experiences that feel premium and perform fast.
                         </h1>
                     </div>
 
-                    <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
-                        I am a software engineering student at IJSE focusing on full-stack solutions, combining
-                        strong fundamentals with product thinking to ship polished, performant interfaces.
+                    <p className="text-lg text-cyan-50/80 leading-relaxed max-w-xl">
+                        I am Malith Shehan, a software engineering student at IJSE and an intern at Sri Lanka Telecom.
+                        I focus on building clean interfaces, scalable systems, and practical digital products for real users.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
                         <a
                             href={cvFile}
                             download
-                            className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-base font-semibold text-black bg-gradient-to-r from-purple-500 to-cyan-400"
+                            className="accent-button"
                         >
-                            Download résumé
+                            Download Resume
                         </a>
                         <a
                             href="#portfolio"
-                            className="glass-button text-base font-semibold"
+                            className="glass-button text-base font-semibold inline-flex items-center gap-2"
                         >
                             View projects
+                            <AiOutlineArrowRight />
                         </a>
                     </div>
 
@@ -101,7 +103,7 @@ const Hero = () => {
                                 href={social.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 transition"
+                                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:-translate-y-0.5 transition"
                             >
                                 {social.icon}
                             </a>
@@ -112,7 +114,7 @@ const Hero = () => {
                         {stats.map((stat) => (
                             <div key={stat.label}>
                                 <p className="text-3xl font-semibold">{stat.value}</p>
-                                <p className="text-xs uppercase tracking-[0.3em] text-gray-400">{stat.label}</p>
+                                <p className="text-xs uppercase tracking-[0.22em] text-cyan-100/70">{stat.label}</p>
                             </div>
                         ))}
                     </div>
@@ -125,7 +127,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="relative"
                 >
-                    <div className="absolute -inset-6 bg-gradient-to-r from-purple-500/20 via-transparent to-cyan-400/20 blur-3xl rounded-full" />
+                    <div className="absolute -inset-6 bg-gradient-to-r from-[#1ab8a8]/25 via-transparent to-[#f8ba50]/25 blur-3xl rounded-full" />
                     <div className="section-shell p-6">
                         <div className="rounded-[26px] overflow-hidden border border-white/5 bg-gradient-to-b from-white/5 to-white/0">
                             <img
@@ -134,14 +136,14 @@ const Hero = () => {
                                 className="w-full object-cover"
                             />
                         </div>
-                        <div className="grid grid-cols-2 gap-4 mt-6 text-sm text-gray-300">
+                        <div className="grid grid-cols-2 gap-4 mt-6 text-sm text-cyan-50/80">
                             <div>
-                                <p className="text-gray-500">Current Focus</p>
-                                <p className="text-white font-semibold">Full-stack product builds</p>
+                                <p className="text-cyan-200/60">Current Focus</p>
+                                <p className="text-white font-semibold">Full-stack developper</p>
                             </div>
                             <div>
-                                <p className="text-gray-500">Learning Track</p>
-                                <p className="text-white font-semibold">Graduate Diploma @ IJSE</p>
+                                <p className="text-cyan-200/60">Learning Track</p>
+                                <p className="text-white font-semibold">GDSE at IJSE</p>
                             </div>
                         </div>
                     </div>
@@ -155,8 +157,8 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="mt-16 section-shell px-6 py-8"
             >
-                <p className="text-sm uppercase tracking-[0.5em] text-gray-400 text-center mb-6">
-                    Tools I am fluent in
+                <p className="text-sm uppercase tracking-[0.5em] text-cyan-100/70 text-center mb-6">
+                    Tools I work with
                 </p>
                 <div className="flex flex-wrap justify-center gap-6 text-4xl sm:text-5xl text-white">
                     {techIcons.map((icon, index) => (

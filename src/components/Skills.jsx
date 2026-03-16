@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 const skills = [
     {
         category: "Frontend Engineering",
-        description: "Component-driven interfaces with focus on animation, accessibility, and performance.",
+        description: "I craft fast, component-driven interfaces with strong UX structure, smooth interactions, and maintainable design systems.",
         technologies: [
             { name: "HTML", icon: <DiHtml5 className="text-orange-500" /> },
             { name: "CSS", icon: <DiCss3 className="text-blue-500" /> },
@@ -24,11 +24,11 @@ const skills = [
             { name: "Flutter", icon: <DiReact className="text-blue-400" /> },
             
         ],
-        tools: ["Tailwind", "Framer Motion", "Vite"],
+        tools: ["Tailwind", "Framer Motion", "Vite", "Figma"],
     },
     {
         category: "Backend & Dev Tools",
-        description: "Lightweight APIs, database modeling, and developer tooling that supports fast iteration.",
+        description: "I build practical backend services and data layers for shipping MVPs, dashboards, and production-ready internal tools.",
         technologies: [
             { name: "Node", icon: <DiNodejsSmall className="text-green-400" /> },
             { name: "Express", icon: <DiNodejsSmall className="text-green-500" /> },
@@ -38,7 +38,7 @@ const skills = [
             { name: "Java", icon: <DiJavascript1 className="text-red-400" /> },
             { name: "Firebase", icon: <DiMongodb className="text-yellow-400" /> },
         ],
-        tools: ["REST", "Git", "TypeScript"],
+        tools: ["REST APIs", "Git", "TypeScript", "Postman"],
     },
 ];
 
@@ -55,10 +55,10 @@ const Skills = () => {
                 >
                     <span className="badge-pill">Capabilities</span>
                     <h2 className="text-4xl md:text-5xl font-semibold mt-5">
-                        A balanced stack to move from idea to polished product.
+                        A balanced engineering toolkit from UX concept to live deployment.
                     </h2>
-                    <p className="mt-4 text-lg text-gray-300">
-                        Frontend craft, backend fundamentals, and collaboration habits that keep teams shipping.
+                    <p className="mt-4 text-lg text-cyan-50/75">
+                        My work combines technical depth and product thinking, so interfaces are not only beautiful but genuinely useful.
                     </p>
                 </motion.div>
 
@@ -74,16 +74,16 @@ const Skills = () => {
                         >
                             <div className="flex items-center justify-between">
                                 <h3 className="text-2xl font-semibold">{skill.category}</h3>
-                                <div className="text-sm text-gray-400 uppercase tracking-[0.3em]">Core</div>
+                                <div className="text-sm text-cyan-100/70 uppercase tracking-[0.3em]">Core</div>
                             </div>
-                            <p className="mt-4 text-gray-300 leading-relaxed">{skill.description}</p>
+                            <p className="mt-4 text-cyan-50/80 leading-relaxed">{skill.description}</p>
                             <div className="soft-divider my-6" />
 
                             <div className="grid grid-cols-2 gap-6">
                                 {skill.technologies.map((tech) => (
                                     <div
                                         key={tech.name}
-                                        className="flex items-center gap-3 text-lg font-medium"
+                                        className="flex items-center gap-3 text-lg font-medium text-cyan-50"
                                     >
                                         <span className="text-4xl">{tech.icon}</span>
                                         {tech.name}
@@ -92,12 +92,12 @@ const Skills = () => {
                             </div>
 
                             <div className="soft-divider my-6" />
-                            <p className="text-sm uppercase tracking-[0.4em] text-gray-500">Tooling</p>
+                            <p className="text-sm uppercase tracking-[0.4em] text-cyan-100/60">Tooling</p>
                             <div className="flex flex-wrap gap-3 mt-3">
                                 {skill.tools.map((tool) => (
                                     <span
                                         key={tool}
-                                        className="px-4 py-2 rounded-full bg-white/5 text-sm text-gray-200"
+                                        className="px-4 py-2 rounded-full bg-white/5 text-sm text-cyan-50/85"
                                     >
                                         {tool}
                                     </span>
@@ -105,6 +105,12 @@ const Skills = () => {
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="mt-10 text-center">
+                    <p className="text-sm md:text-base text-cyan-100/70 tracking-wide">
+                        Also experienced with Agile teamwork, Git workflows, and rapid prototype-to-production cycles.
+                    </p>
                 </div>
             </Reveal>
         </section>
