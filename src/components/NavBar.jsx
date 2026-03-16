@@ -33,10 +33,10 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-[#051720]/70 backdrop-blur-2xl"
     >
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 md:px-10 h-20 text-cyan-50">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 h-16 md:h-20 text-cyan-50">
         <a href="#" className="flex flex-col leading-tight">
-          <span className="text-[11px] tracking-[0.45em] uppercase text-cyan-200/70">Software Engineer</span>
-          <span className="text-2xl font-semibold tracking-tight">Malith Shehan</span>
+          <span className="text-[9px] sm:text-[11px] tracking-[0.3em] sm:tracking-[0.45em] uppercase text-cyan-200/70">Software Engineer</span>
+          <span className="text-lg sm:text-2xl font-semibold tracking-tight">Malith Shehan</span>
         </a>
 
         <ul className="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em] text-cyan-100/80">
@@ -78,9 +78,9 @@ const Navbar = () => {
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
-            className="fixed top-0 left-0 w-full min-h-screen bg-[#04131b] p-10 md:hidden z-40"
+            className="fixed top-0 left-0 w-full min-h-screen bg-[#04131b] px-6 py-8 md:hidden z-40"
           >
-            <ul className="flex flex-col space-y-10 mt-24 text-center text-xl font-semibold tracking-[0.2em]">
+            <ul className="flex flex-col space-y-8 mt-20 text-center text-lg font-semibold tracking-[0.15em]">
               {navItems.map((item) => (
                 <li key={item.id}>
                   <Link

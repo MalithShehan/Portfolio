@@ -46,6 +46,10 @@ p {
     overflow: clip;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .section-shell {
     border: 1px solid var(--stroke);
     border-radius: 32px;
@@ -138,5 +142,32 @@ p {
 .accent-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 14px 40px rgba(25, 183, 166, 0.28);
+}
+
+@media (max-width: 768px) {
+    .section-shell {
+        border-radius: 22px;
+    }
+
+    .badge-pill {
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        padding: 0.35rem 0.8rem;
+    }
+
+    .accent-button,
+    .glass-button {
+        width: 100%;
+        min-height: 46px;
+        justify-content: center;
+    }
+
+    .app-noise {
+        opacity: 0.05;
+    }
+
+    .ambient-orb {
+        filter: blur(70px);
+    }
 }
 

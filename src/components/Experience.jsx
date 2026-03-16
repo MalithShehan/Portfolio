@@ -27,18 +27,18 @@ const experience = [
 
 const Experience = () => {
   return (
-    <section className="max-w-[1100px] mx-auto px-6 py-20" id="experience">
+    <section className="max-w-[1100px] mx-auto px-4 sm:px-6 py-14 sm:py-20" id="experience">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <span className="badge-pill">Journey</span>
-        <h2 className="text-4xl md:text-5xl font-semibold mt-5">
+        <h2 className="text-3xl md:text-5xl font-semibold mt-4 sm:mt-5 leading-tight">
           Education and experience that shaped my engineering mindset.
         </h2>
       </div>
 
       <div className="relative">
-        <span className="absolute left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#1ab8a8]/70 to-[#f7ba54]/70" />
+        <span className="absolute left-3 sm:left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#1ab8a8]/70 to-[#f7ba54]/70" />
 
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-10">
           {experience.map((item, index) => (
             <Reveal key={`${item.school}-${item.period}`} width="100%">
               <motion.div
@@ -46,12 +46,12 @@ const Experience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="section-shell p-8 pl-16 relative"
+                className="section-shell p-5 sm:p-8 pl-10 sm:pl-16 relative"
               >
-                <span className="absolute left-4 top-8 w-4 h-4 rounded-full bg-gradient-to-r from-[#1ab8a8] to-[#f7ba54]" />
-                <p className="text-sm uppercase tracking-[0.32em] text-cyan-100/60">{item.period}</p>
-                <h3 className="text-2xl font-semibold mt-3">{item.school}</h3>
-                <p className="text-cyan-50/80 mt-4">{item.description}</p>
+                <span className="absolute left-[0.35rem] sm:left-4 top-6 sm:top-8 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-gradient-to-r from-[#1ab8a8] to-[#f7ba54]" />
+                <p className="text-xs sm:text-sm uppercase tracking-[0.15em] sm:tracking-[0.32em] text-cyan-100/60">{item.period}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold mt-2 sm:mt-3">{item.school}</h3>
+                <p className="text-cyan-50/80 mt-3 sm:mt-4 text-sm sm:text-base">{item.description}</p>
               </motion.div>
             </Reveal>
           ))}

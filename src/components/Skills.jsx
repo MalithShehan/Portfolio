@@ -44,7 +44,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <section className="max-w-[1100px] mx-auto px-6 py-20" id="skills">
+        <section className="max-w-[1100px] mx-auto px-4 sm:px-6 py-14 sm:py-20" id="skills">
             <Reveal width="100%">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -54,15 +54,15 @@ const Skills = () => {
                     className="text-center max-w-2xl mx-auto"
                 >
                     <span className="badge-pill">Capabilities</span>
-                    <h2 className="text-4xl md:text-5xl font-semibold mt-5">
+                    <h2 className="text-3xl md:text-5xl font-semibold mt-4 sm:mt-5 leading-tight">
                         A balanced engineering toolkit from UX concept to live deployment.
                     </h2>
-                    <p className="mt-4 text-lg text-cyan-50/75">
+                    <p className="mt-4 text-base sm:text-lg text-cyan-50/75">
                         My work combines technical depth and product thinking, so interfaces are not only beautiful but genuinely useful.
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-10 mt-16">
+                <div className="grid md:grid-cols-2 gap-6 sm:gap-10 mt-10 sm:mt-16">
                     {skills.map((skill, index) => (
                         <motion.div
                             key={skill.category}
@@ -70,34 +70,34 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: index * 0.1 }}
-                            className="section-shell p-8"
+                            className="section-shell p-5 sm:p-8"
                         >
                             <div className="flex items-center justify-between">
-                                <h3 className="text-2xl font-semibold">{skill.category}</h3>
-                                <div className="text-sm text-cyan-100/70 uppercase tracking-[0.3em]">Core</div>
+                                <h3 className="text-xl sm:text-2xl font-semibold">{skill.category}</h3>
+                                <div className="text-xs sm:text-sm text-cyan-100/70 uppercase tracking-[0.2em] sm:tracking-[0.3em]">Core</div>
                             </div>
-                            <p className="mt-4 text-cyan-50/80 leading-relaxed">{skill.description}</p>
+                            <p className="mt-3 sm:mt-4 text-cyan-50/80 leading-relaxed text-sm sm:text-base">{skill.description}</p>
                             <div className="soft-divider my-6" />
 
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-2 gap-4 sm:gap-6">
                                 {skill.technologies.map((tech) => (
                                     <div
                                         key={tech.name}
-                                        className="flex items-center gap-3 text-lg font-medium text-cyan-50"
+                                        className="flex items-center gap-2 sm:gap-3 text-sm sm:text-lg font-medium text-cyan-50"
                                     >
-                                        <span className="text-4xl">{tech.icon}</span>
+                                        <span className="text-3xl sm:text-4xl">{tech.icon}</span>
                                         {tech.name}
                                     </div>
                                 ))}
                             </div>
 
                             <div className="soft-divider my-6" />
-                            <p className="text-sm uppercase tracking-[0.4em] text-cyan-100/60">Tooling</p>
+                            <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.4em] text-cyan-100/60">Tooling</p>
                             <div className="flex flex-wrap gap-3 mt-3">
                                 {skill.tools.map((tool) => (
                                     <span
                                         key={tool}
-                                        className="px-4 py-2 rounded-full bg-white/5 text-sm text-cyan-50/85"
+                                        className="px-3 sm:px-4 py-2 rounded-full bg-white/5 text-xs sm:text-sm text-cyan-50/85"
                                     >
                                         {tool}
                                     </span>
@@ -107,8 +107,8 @@ const Skills = () => {
                     ))}
                 </div>
 
-                <div className="mt-10 text-center">
-                    <p className="text-sm md:text-base text-cyan-100/70 tracking-wide">
+                <div className="mt-8 sm:mt-10 text-center">
+                    <p className="text-sm md:text-base text-cyan-100/70 tracking-normal sm:tracking-wide">
                         Also experienced with Agile teamwork, Git workflows, and rapid prototype-to-production cycles.
                     </p>
                 </div>

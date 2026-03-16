@@ -51,14 +51,14 @@ const techIcons = [
 
 const Hero = () => {
     return (
-        <section className="mt-32 md:mt-40 max-w-[1200px] mx-auto px-6" id="hero">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="mt-24 md:mt-40 max-w-[1200px] mx-auto px-4 sm:px-6" id="hero">
+            <div className="grid lg:grid-cols-2 gap-10 md:gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="space-y-8"
+                    className="space-y-6 md:space-y-8"
                 >
                     <span className="badge-pill">Based in Sri Lanka</span>
 
@@ -67,19 +67,19 @@ const Hero = () => {
                             sequence={["Software Engineer", 1400, "Frontend Specialist", 1400, "Full-stack Builder", 1400]}
                             speed={50}
                             repeat={Infinity}
-                            className="text-sm md:text-base uppercase tracking-[0.35em] text-cyan-100/80"
+                            className="text-xs sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.35em] text-cyan-100/80"
                         />
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mt-5">
+                        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight mt-4 md:mt-5 leading-tight">
                             I design and build production-ready web experiences that feel premium and perform fast.
                         </h1>
                     </div>
 
-                    <p className="text-lg text-cyan-50/80 leading-relaxed max-w-xl">
+                    <p className="text-base sm:text-lg text-cyan-50/80 leading-relaxed max-w-xl">
                         I am Malith Shehan, a software engineering student at IJSE and an intern at Sri Lanka Telecom.
                         I focus on building clean interfaces, scalable systems, and practical digital products for real users.
                     </p>
 
-                    <div className="flex flex-wrap gap-4">
+                    <div className="grid sm:flex gap-3 sm:gap-4">
                         <a
                             href={cvFile}
                             download
@@ -96,25 +96,25 @@ const Hero = () => {
                         </a>
                     </div>
 
-                    <div className="flex flex-wrap gap-6 items-center">
+                    <div className="flex flex-wrap gap-3 sm:gap-6 items-center">
                         {socialLinks.map((social, index) => (
                             <a
                                 key={index}
                                 href={social.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:-translate-y-0.5 transition"
+                                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-white/60 hover:-translate-y-0.5 transition"
                             >
                                 {social.icon}
                             </a>
                         ))}
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 pt-5 sm:pt-6 border-t border-white/10">
                         {stats.map((stat) => (
                             <div key={stat.label}>
-                                <p className="text-3xl font-semibold">{stat.value}</p>
-                                <p className="text-xs uppercase tracking-[0.22em] text-cyan-100/70">{stat.label}</p>
+                                <p className="text-2xl sm:text-3xl font-semibold">{stat.value}</p>
+                                <p className="text-[11px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.22em] text-cyan-100/70">{stat.label}</p>
                             </div>
                         ))}
                     </div>
@@ -125,18 +125,18 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative"
+                    className="relative order-first lg:order-none"
                 >
                     <div className="absolute -inset-6 bg-gradient-to-r from-[#1ab8a8]/25 via-transparent to-[#f8ba50]/25 blur-3xl rounded-full" />
-                    <div className="section-shell p-6">
-                        <div className="rounded-[26px] overflow-hidden border border-white/5 bg-gradient-to-b from-white/5 to-white/0">
+                    <div className="section-shell p-4 sm:p-6">
+                        <div className="rounded-[18px] sm:rounded-[26px] overflow-hidden border border-white/5 bg-gradient-to-b from-white/5 to-white/0">
                             <img
                                 src={profilepic}
                                 alt="Malith Shehan"
                                 className="w-full object-cover"
                             />
                         </div>
-                        <div className="grid grid-cols-2 gap-4 mt-6 text-sm text-cyan-50/80">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5 sm:mt-6 text-sm text-cyan-50/80">
                             <div>
                                 <p className="text-cyan-200/60">Current Focus</p>
                                 <p className="text-white font-semibold">Full-stack developper</p>
@@ -155,12 +155,12 @@ const Hero = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-16 section-shell px-6 py-8"
+                className="mt-12 sm:mt-16 section-shell px-4 sm:px-6 py-6 sm:py-8"
             >
-                <p className="text-sm uppercase tracking-[0.5em] text-cyan-100/70 text-center mb-6">
+                <p className="text-xs sm:text-sm uppercase tracking-[0.24em] sm:tracking-[0.5em] text-cyan-100/70 text-center mb-5 sm:mb-6">
                     Tools I work with
                 </p>
-                <div className="flex flex-wrap justify-center gap-6 text-4xl sm:text-5xl text-white">
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-3xl sm:text-5xl text-white">
                     {techIcons.map((icon, index) => (
                         <span key={index} className="opacity-80">{icon}</span>
                     ))}
