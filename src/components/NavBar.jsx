@@ -35,7 +35,7 @@ const Navbar = () => {
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 h-16 md:h-20 text-cyan-50">
         <a href="#" className="flex flex-col leading-tight">
-          <span className="text-[9px] sm:text-[11px] tracking-[0.3em] sm:tracking-[0.45em] uppercase text-cyan-200/70">Software Engineer</span>
+          <span className="text-[9px] sm:text-[11px] tracking-[0.3em] sm:tracking-[0.45em] uppercase text-cyan-200/70">Full-Stack Developer</span>
           <span className="text-lg sm:text-2xl font-semibold tracking-tight">Malith Shehan</span>
         </a>
 

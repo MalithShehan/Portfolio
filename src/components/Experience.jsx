@@ -4,24 +4,24 @@ import Reveal from "./Reveal.jsx";
 
 const experience = [
   {
-    school: "St/Aloysius College",
-    period: "2009 - 2019 · Galle, Sri Lanka",
-    description: "Completed foundational studies and Ordinary Level examinations with a strong focus on analytical subjects.",
-  },
-  {
-    school: "St/Aloysius College",
-    period: "2019 - 2022 · Galle, Sri Lanka",
-    description: "Completed Advanced Level studies while developing early interests in software systems and digital product development.",
+    school: "St. Aloysius College",
+    period: "2019 – 2022 · Galle, Sri Lanka",
+    description: "Completed G.C.E. Advanced Level studies while developing early interests in software systems and digital product development.",
   },
   {
     school: "Institute Of Java Software Engineering",
-    period: "2023 - 2025 · Galle, Sri Lanka",
-    description: "Pursued the Graduate Diploma in Software Engineering, gaining hands-on experience in full-stack development and teamwork.",
+    period: "2023 – 2025 · Galle, Sri Lanka",
+    description: "Pursued the Graduate Diploma in Software Engineering, gaining hands-on experience in full-stack development, team collaboration, and real-world project delivery.",
   },
   {
     school: "Sri Lanka Telecom (SLT)",
-    period: "2025 - Present · Colombo, Sri Lanka",
-    description: "Software Engineer building internal dashboards, automation pilots, and operations tooling for business teams.",
+    period: "Aug 2025 – Feb 2026 · Colombo, Sri Lanka",
+    description: "Software Development Intern — built and maintained full-stack internal enterprise applications, integrated RESTful APIs, and collaborated in an Agile environment to debug, ship features, and improve application stability.",
+  },
+  {
+    school: "ICBT Campus",
+    period: "2026 – Present · Galle, Sri Lanka",
+    description: "Pursuing a BSc (Hons) in Software Engineering (Top-up), deepening expertise in advanced software architecture, cloud systems, and engineering best practices.",
   },
 ];
 

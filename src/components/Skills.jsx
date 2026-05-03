@@ -8,6 +8,7 @@ import {
     DiNodejsSmall,
     DiReact,
 } from "react-icons/di";
+import { SiNextdotjs, SiSpring, SiDocker } from "react-icons/si";
 import Reveal from "./Reveal.jsx";
 import { motion } from "framer-motion";
 
@@ -20,11 +21,12 @@ const skills = [
             { name: "CSS", icon: <DiCss3 className="text-blue-500" /> },
             { name: "JavaScript", icon: <DiJavascript1 className="text-yellow-400" /> },
             { name: "React", icon: <DiReact className="text-cyan-400" /> },
+            { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
             { name: "Tailwind", icon: <DiCss3 className="text-teal-400" /> },
             { name: "Flutter", icon: <DiReact className="text-blue-400" /> },
             
         ],
-        tools: ["Tailwind", "Framer Motion", "Vite", "Figma"],
+        tools: ["Tailwind", "Framer Motion", "Vite", "Figma", "React Native"],
     },
     {
         category: "Backend & Dev Tools",
@@ -32,13 +34,14 @@ const skills = [
         technologies: [
             { name: "Node", icon: <DiNodejsSmall className="text-green-400" /> },
             { name: "Express", icon: <DiNodejsSmall className="text-green-500" /> },
+            { name: "Spring Boot", icon: <SiSpring className="text-green-400" /> },
             { name: "MongoDB", icon: <DiMongodb className="text-green-600" /> },
             { name: "MySQL", icon: <DiMysql className="text-orange-400" /> },
             { name: "Python", icon: <DiJavascript1 className="text-yellow-600" /> },
             { name: "Java", icon: <DiJavascript1 className="text-red-400" /> },
-            { name: "Firebase", icon: <DiMongodb className="text-yellow-400" /> },
+            { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
         ],
-        tools: ["REST APIs", "Git", "TypeScript", "Postman"],
+        tools: ["REST APIs", "Git", "TypeScript", "AWS (EC2, S3)", "Docker", "Postman"],
     },
 ];
 

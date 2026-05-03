@@ -26,7 +26,7 @@ import { FiFigma } from "react-icons/fi";
 const stats = [
     { label: "Completed Projects", value: "15+" },
     { label: "Years Building", value: "2+" },
-    { label: "Current Role", value: "Software Engineer" },
+    { label: "Current Role", value: "Full-Stack Developer" },
 ];
 
 const socialLinks = [
@@ -64,7 +64,7 @@ const Hero = () => {
 
                     <div>
                         <TypeAnimation
-                            sequence={["Software Engineer", 1400, "Frontend Specialist", 1400, "Full-stack Builder", 1400]}
+                            sequence={["Full-Stack Developer", 1400, "Spring Boot Engineer", 1400, "Frontend Specialist", 1400, "Flutter Developer", 1400]}
                             speed={50}
                             repeat={Infinity}
                             className="text-xs sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.35em] text-cyan-100/80"
@@ -75,8 +75,8 @@ const Hero = () => {
                     </div>
 
                     <p className="text-base sm:text-lg text-cyan-50/80 leading-relaxed max-w-xl">
-                        I am Malith Shehan, a software engineering student at IJSE and an intern at Sri Lanka Telecom.
-                        I focus on building clean interfaces, scalable systems, and practical digital products for real users.
+                        I am Malith Shehan, a full-stack developer currently pursuing a BSc (Hons) in Software Engineering at ICBT Campus.
+                        I completed my internship at Sri Lanka Telecom and focus on building clean interfaces, scalable systems, and practical digital products for real users.
                     </p>
 
                     <div className="grid sm:flex gap-3 sm:gap-4">
@@ -139,11 +139,11 @@ const Hero = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5 sm:mt-6 text-sm text-cyan-50/80">
                             <div>
                                 <p className="text-cyan-200/60">Current Focus</p>
-                                <p className="text-white font-semibold">Full-stack developper</p>
+                                <p className="text-white font-semibold">Full-Stack Developer</p>
                             </div>
                             <div>
-                                <p className="text-cyan-200/60">Learning Track</p>
-                                <p className="text-white font-semibold">GDSE at IJSE</p>
+                                <p className="text-cyan-200/60">Studying At</p>
+                                <p className="text-white font-semibold">BSc at ICBT Campus</p>
                             </div>
                         </div>
                     </div>

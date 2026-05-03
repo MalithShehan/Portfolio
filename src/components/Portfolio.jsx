@@ -12,7 +12,7 @@ const projects = [
     img: cropMonitoring,
     title: "Crop Monitoring Platform",
     description:
-      "Built a data-rich dashboard for plantation teams to monitor soil conditions, automate watering alerts, and review drone captures.",
+      "Built an enterprise-level full-stack platform for Green Shadow (Pvt) Ltd to manage crop, staff, and vehicle operations with RBAC and a structured MySQL database, reducing manual data handling by 30% and improving operational efficiency by 25% across 500+ records.",
     links: {
       site: "",
       github: "https://github.com/MalithShehan/Crop-monitoring-system.git",
@@ -23,7 +23,7 @@ const projects = [
     img: library,
     title: "Library Management System",
     description:
-      "Developed a cross-platform solution that streamlines lending operations, member onboarding, and reporting for education institutes.",
+      "Built a comprehensive web system using TypeScript and MySQL to automate book tracking and borrowing, reducing processing time by 40%, improving data accuracy by 30%, and supporting 100+ active users.",
     links: {
       site: "",
       github: "https://github.com/MalithShehan/RAD-Final-Project.git",
@@ -45,7 +45,7 @@ const projects = [
     img: southlankafireworkswebsite,
     title: "South Lanka Fireworks Website",
     description:
-      "Designed and shipped a vibrant e-commerce platform with product discovery, conversion-focused pages, and secure purchase flows.",
+      "Designed and shipped a vibrant e-commerce showcase using React, Tailwind CSS, and Node.js with deployment via Hostinger and GitHub, boosting performance by 20% and increasing customer inquiries by 25%.",
     links: {
       site: "https://slfireworks.com/",
       github: "https://github.com/MalithShehan/South-Lanka-Fireworks-Web.git",
