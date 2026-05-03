@@ -12,6 +12,7 @@ const navItems = [
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const toggleNav = () => setNavOpen((prev) => !prev);
   const closeNav = () => setNavOpen(false);
@@ -21,6 +22,30 @@ const Navbar = () => {
     document.body.style.overflow = navOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [navOpen]);
+
+  // Prevent stuck drawer state when viewport changes from mobile to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setNavOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Enable keyboard close for accessibility
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setNavOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const drawerVariants = {
     hidden: { x: "100%", opacity: 0 },
@@ -57,8 +82,18 @@ const Navbar = () => {
 
         <ul className="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em] text-cyan-100/80">
           {navItems.map((item) => (
-            <li key={item.id} className="hover:text-white transition cursor-pointer">
-              <Link to={item.id} smooth offset={-80} duration={600}>{item.label}</Link>
+            <li key={item.id} className="cursor-pointer">
+              <Link
+                to={item.id}
+                smooth
+                spy
+                offset={-80}
+                duration={600}
+                onSetActive={() => setActiveSection(item.id)}
+                className={`transition ${activeSection === item.id ? "text-white" : "text-cyan-100/80 hover:text-white"}`}
+              >
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -74,6 +109,8 @@ const Navbar = () => {
           onClick={toggleNav}
           className="md:hidden relative z-[60] w-10 h-10 flex items-center justify-center rounded-full border border-white/15 bg-white/5 text-cyan-50 transition hover:border-white/40"
           aria-label="Toggle menu"
+          aria-expanded={navOpen}
+          aria-controls="mobile-navigation-drawer"
         >
           <AnimatePresence mode="wait" initial={false}>
             {navOpen ? (
@@ -111,14 +148,17 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 z-50 h-full w-[80vw] max-w-[320px] md:hidden flex flex-col"
+              id="mobile-navigation-drawer"
+              role="dialog"
+              aria-modal="true"
+              className="fixed top-0 right-0 z-50 h-full w-[86vw] max-w-[340px] md:hidden flex flex-col"
               style={{
                 background: "linear-gradient(145deg, #071e2b 0%, #0a2c3e 100%)",
                 borderLeft: "1px solid rgba(255,255,255,0.1)",
               }}
             >
               {/* Drawer header */}
-              <div className="flex items-center justify-between px-6 pt-6 pb-5 border-b border-white/10">
+              <div className="flex items-center justify-between px-6 pt-[calc(1.5rem+env(safe-area-inset-top))] pb-5 border-b border-white/10">
                 <div className="flex flex-col leading-tight">
                   <span className="text-[9px] tracking-[0.35em] uppercase text-cyan-200/60">Full-Stack Developer</span>
                   <span className="text-base font-semibold tracking-tight text-white">Malith Shehan</span>
@@ -139,15 +179,22 @@ const Navbar = () => {
                     <motion.li key={item.id} custom={i} variants={itemVariants} initial="hidden" animate="visible">
                       <Link
                         to={item.id}
-                        onClick={closeNav}
+                        onClick={() => {
+                          setActiveSection(item.id);
+                          closeNav();
+                        }}
                         smooth
+                        spy
                         offset={-70}
                         duration={600}
-                        className="group flex items-center gap-4 px-4 py-4 rounded-2xl cursor-pointer transition hover:bg-white/5"
+                        onSetActive={() => setActiveSection(item.id)}
+                        className={`group flex items-center gap-4 px-4 py-4 rounded-2xl cursor-pointer transition ${
+                          activeSection === item.id ? "bg-white/10" : "hover:bg-white/5"
+                        }`}
                       >
                         <span className="text-[10px] font-semibold tracking-[0.2em] text-cyan-400/60 w-5 shrink-0">{item.number}</span>
-                        <span className="h-px w-6 bg-white/15 group-hover:bg-cyan-400/60 transition-colors" />
-                        <span className="text-base font-semibold tracking-wide text-cyan-50/85 group-hover:text-white transition-colors uppercase">
+                        <span className={`h-px w-6 transition-colors ${activeSection === item.id ? "bg-cyan-400/70" : "bg-white/15 group-hover:bg-cyan-400/60"}`} />
+                        <span className={`text-base font-semibold tracking-wide uppercase transition-colors ${activeSection === item.id ? "text-white" : "text-cyan-50/85 group-hover:text-white"}`}>
                           {item.label}
                         </span>
                       </Link>
@@ -157,10 +204,13 @@ const Navbar = () => {
               </nav>
 
               {/* CTA + social */}
-              <div className="px-6 pb-10 pt-4 border-t border-white/10 space-y-4">
+              <div className="px-6 pb-[calc(2.5rem+env(safe-area-inset-bottom))] pt-4 border-t border-white/10 space-y-4">
                 <Link
                   to="contact"
-                  onClick={closeNav}
+                  onClick={() => {
+                    setActiveSection("contact");
+                    closeNav();
+                  }}
                   smooth
                   offset={-60}
                   duration={600}
