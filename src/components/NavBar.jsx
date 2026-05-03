@@ -129,34 +129,20 @@ const Navbar = () => {
       {/* ── Mobile drawer ── */}
       <AnimatePresence>
         {navOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              key="backdrop"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              onClick={closeNav}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
-            />
-
-            {/* Drawer panel */}
-            <motion.div
-              key="drawer"
-              variants={drawerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              id="mobile-navigation-drawer"
-              role="dialog"
-              aria-modal="true"
-              className="fixed top-0 right-0 z-50 h-full w-[86vw] max-w-[340px] md:hidden flex flex-col"
-              style={{
-                background: "linear-gradient(145deg, #071e2b 0%, #0a2c3e 100%)",
-                borderLeft: "1px solid rgba(255,255,255,0.1)",
-              }}
-            >
+          <motion.div
+            key="drawer"
+            variants={drawerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            id="mobile-navigation-drawer"
+            role="dialog"
+            aria-modal="true"
+            className="fixed inset-0 z-[80] h-dvh w-full md:hidden flex flex-col"
+            style={{
+              background: "linear-gradient(145deg, #071e2b 0%, #0a2c3e 100%)",
+            }}
+          >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 pt-[calc(1.5rem+env(safe-area-inset-top))] pb-5 border-b border-white/10">
                 <div className="flex flex-col leading-tight">
@@ -229,8 +215,7 @@ const Navbar = () => {
                   </a>
                 </div>
               </div>
-            </motion.div>
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.nav>
